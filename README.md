@@ -1,4 +1,4 @@
-# 🔬 Laboratorio de Electrónica Digital
+# 🔬 Laboratorio sistemas digitales
 
 <p align="center">
   <img src="https://img.shields.io/badge/Institución-Fundación%20Universitaria%20Compensar-orange"/>
