@@ -385,7 +385,7 @@ La salida es 1 cuando las entradas son diferentes entre sí.
 -  74HC86: https://www.ti.com/lit/ds/symlink/sn74hc86.pdf
 -  74LS86: https://www.ti.com/lit/ds/symlink/sn74ls86.pdf
 
->  **Esquema y foto del montaje – Compuerta XOR**
+
 > 
 
 ---
