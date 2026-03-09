@@ -15,7 +15,7 @@
 |--------|-----|
 | Jorge Torrenegra Almanza | Integrante |
 | Gilbert Alejandro Ángel Jimenez | Integrante |
-| Diego Alejandro Barragán Vargas | Integrante |
+
 
 ---
 
@@ -268,7 +268,7 @@ La salida es **1** únicamente cuando **todas** las entradas son 1.
 -  **74LS08:** https://www.ti.com/lit/ds/symlink/sn74ls08.pdf
 
 >  **Esquema y foto del montaje – Compuerta AND**
-> *(Subir foto del montaje con nombre: `and_montaje.png`)*
+> 
 
 ---
 
@@ -292,7 +292,7 @@ La salida es **1** cuando **al menos una** de las entradas es 1.
 -  **74LS32:** https://www.ti.com/lit/ds/symlink/sn74ls32.pdf
 
 >  **Esquema y foto del montaje – Compuerta OR**
-> *(Subir foto del montaje con nombre: `or_montaje.png`)*
+> 
 
 ---
 
@@ -314,7 +314,7 @@ La salida es siempre el **inverso** de la entrada.
 -  **74LS04:** https://www.ti.com/lit/ds/symlink/sn74ls04.pdf
 
 >  **Esquema y foto del montaje – Compuerta NOT**
-> *(Subir foto del montaje con nombre: `not_montaje.png`)*
+> 
 
 ---
 
@@ -338,7 +338,7 @@ La salida es **0** únicamente cuando **todas** las entradas son 1.
 -  **74LS00:** https://www.ti.com/lit/ds/symlink/sn74ls00.pdf
 
 >  **Esquema y foto del montaje – Compuerta NAND**
-> *(Subir foto del montaje con nombre: `nand_montaje.png`)*
+> 
 
 ---
 
@@ -362,7 +362,7 @@ La salida es **1** únicamente cuando **todas** las entradas son 0.
 -  **74LS02:** https://www.ti.com/lit/ds/symlink/sn74ls02.pdf
 
 >  **Esquema y foto del montaje – Compuerta NOR**
-> *(Subir foto del montaje con nombre: `nor_montaje.png`)*
+> 
 
 ---
 
@@ -386,7 +386,7 @@ La salida es **1** cuando las entradas son **diferentes** entre sí.
 -  **74LS86:** https://www.ti.com/lit/ds/symlink/sn74ls86.pdf
 
 >  **Esquema y foto del montaje – Compuerta XOR**
-> *(Subir foto del montaje con nombre: `xor_montaje.png`)*
+> 
 
 ---
 
