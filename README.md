@@ -1,4 +1,4 @@
-#  Laboratorio sistemas digitales
+# Laboratorio Sistemas Digitales 1
 
 <p align="center">
   <img src="https://img.shields.io/badge/Institución-Fundación%20Universitaria%20Compensar-orange"/>
@@ -9,7 +9,7 @@
 
 ---
 
-## Integrantes del Equipo
+##  Integrantes del Equipo
 
 | Nombre | Rol |
 |--------|-----|
@@ -19,7 +19,7 @@
 
 ---
 
-## Tabla de Contenidos
+##  Tabla de Contenidos
 
 - [Punto 1 – Oscilador Multivibrador Astable con TL555](#punto-1--oscilador-multivibrador-astable-con-tl555)
   - [Introducción](#introducción)
@@ -33,12 +33,6 @@
   - [Conclusión](#conclusión)
   - [Referencias](#referencias-bibliográficas)
 - [Punto 2 – Compuertas Lógicas](#punto-2--compuertas-lógicas)
-  - [Compuerta AND](#compuerta-and--74hc08--74ls08)
-  - [Compuerta OR](#compuerta-or--74hc32--74ls32)
-  - [Compuerta NOT](#compuerta-not--74hc04--74ls04)
-  - [Compuerta NAND](#compuerta-nand--74hc00--74ls00)
-  - [Compuerta NOR](#compuerta-nor--74hc02--74ls02)
-  - [Compuerta XOR](#compuerta-xor--74hc86--74ls86)
 
 ---
 
@@ -61,13 +55,13 @@ Este comportamiento genera una **onda cuadrada periódica**, utilizada ampliamen
 
 ## Objetivos
 
-### Objetivo General
+###  Objetivo General
 Diseñar y montar en el aula de clase un circuito generador de **onda cuadrada utilizando el temporizador TL555 en modo astable**, con el fin de comprender el funcionamiento de los osciladores electrónicos y la generación de señales periódicas mediante el uso de componentes electrónicos básicos.
 
-### Objetivo Práctico
+###  Objetivo Práctico
 Implementar sobre una **protoboard** un circuito oscilador basado en el temporizador TL555, realizando la correcta configuración de sus **8 pines**, la conexión de resistencias, capacitor y potenciómetro, y verificar su funcionamiento mediante la observación del encendido y apagado de **LEDs** conectados a la salida del circuito.
 
-### Objetivo de Aprendizaje
+###  Objetivo de Aprendizaje
 Comprender el comportamiento del temporizador 555 en **modo astable**, analizando el proceso de **carga y descarga del capacitor**, así como la influencia de los valores de resistencia y capacitancia en la generación de una señal periódica tipo **onda cuadrada**.
 
 ---
@@ -88,8 +82,9 @@ Comprender el comportamiento del temporizador 555 en **modo astable**, analizand
 | Protoboard | — | Montaje del circuito |
 | Jumpers | — | Conexiones |
 
->  **Foto 1 – Componentes antes del montaje**
-> *(Insertar foto aquí)*
+**📸 Foto 1 – Todos los componentes antes del montaje**
+
+![Componentes antes del montaje](foto1_componentes.png)
 
 ---
 
@@ -108,37 +103,39 @@ El circuito integrado TL555 contiene **comparadores internos, un flip-flop y un 
 | 7 | Discharge | Descarga el capacitor |
 | 8 | Vcc | Alimentación positiva |
 
->  **Foto 2 – Circuito integrado TL555**
-> *(Insertar foto aquí)*
-
 ---
 
 ## Proceso de Montaje y Configuración
 
 El montaje se realizó utilizando una **protoboard**, colocando el TL555 en la parte central para distribuir correctamente las conexiones hacia cada uno de sus pines.
 
-### Configuración Pin a Pin
+###  Configuración Pin a Pin
 
-**Pin 1 – GND (Tierra)**
+** Pin 1 – GND (Tierra)**
 Conectado directamente a la línea negativa de la protoboard (terminal negativo de la batería de 9V). Establece la referencia de tierra para todo el circuito.
 
-**Pin 8 – VCC (Alimentación)**
+** Pin 8 – VCC (Alimentación)**
 Conectado a la línea positiva de la protoboard (terminal positivo de la batería). Suministra la energía necesaria para el funcionamiento interno del temporizador.
 
-**Pin 4 – RESET**
+** Pin 4 – RESET**
 Se realizó un **puente entre el pin 8 y el pin 4**, conectándolo directamente al voltaje positivo para evitar reinicios accidentales. El temporizador permanece activo de forma continua.
 
-**Pines 2 y 6 – TRIGGER / THRESHOLD**
+** Pines 2 y 6 – TRIGGER / THRESHOLD**
 Se conectó el terminal positivo del **capacitor electrolítico de 100µF**. El terminal negativo va a la línea negativa. Este capacitor es el encargado de almacenar energía durante la carga y descarga que genera la oscilación.
 
-**Pin 7 – DISCHARGE**
+** Pin 7 – DISCHARGE**
 Conectado al **potenciómetro de 10kΩ** (terminal central). Permite modificar la resistencia y controlar el tiempo de descarga del capacitor.
 
-**Configuración del Potenciómetro**
+** Configuración del Potenciómetro**
 Un terminal lateral del potenciómetro se conectó al **pin 2**, creando el camino de carga y descarga. Al girarlo se modifica la resistencia total y por tanto la **frecuencia de la señal generada**.
 
->  **Foto 3 – Montaje completo en protoboard**
-> *(Insertar foto aquí)*
+** Foto 2 – Circuito en protoboard (sin energizar)**
+
+![Circuito armado en protoboard](foto3_protoboard.png)
+
+** Foto 3 – Montaje completo con conexiones**
+
+![Montaje completo](foto2_montaje_led.png)
 
 ---
 
@@ -155,7 +152,7 @@ El funcionamiento se basa en el **proceso repetitivo de carga y descarga del cap
 
 Este proceso se repite continuamente, generando una **onda cuadrada en el Pin 3**.
 
-### Fórmula del Periodo
+###  Fórmula del Periodo
 
 La frecuencia depende de **R1**, **R2 (potenciómetro)** y **C1**:
 
@@ -171,9 +168,6 @@ T = 0.693 × 24700 × 0.0001
 T ≈ 1.71 segundos
 ```
 
->  **Foto 4 – LED encendido durante el funcionamiento**
-> *(Insertar foto aquí)*
-
 ---
 
 ## Resultados y Funcionamiento
@@ -182,9 +176,21 @@ Al conectar la batería de **9V**, el temporizador 555 inició automáticamente 
 
 **Observaciones durante la prueba:**
 
-- El circuito funcionó correctamente.
-- La variación del potenciómetro cambió la velocidad de parpadeo del LED.
-- Las resistencias limitaron la corriente evitando daños en los LEDs.
+-  El circuito funcionó correctamente.
+-  La variación del potenciómetro cambió la velocidad de parpadeo del LED.
+-  Las resistencias limitaron la corriente evitando daños en los LEDs.
+
+** Foto 4 – Circuito funcionando con LED encendido**
+
+![Circuito funcionando - LED encendido](foto5_circuito_completo.png)
+
+** Foto 5 – LED en máxima intensidad**
+
+![LED encendido máxima intensidad](foto4_led_encendido.png)
+
+** Foto 6 – Segunda toma del circuito en funcionamiento**
+
+![Segunda toma funcionando](foto6_funcionando.png)
 
 ---
 
@@ -226,7 +232,7 @@ La visualización mediante LEDs permitió verificar de forma directa el comporta
 
 # Punto 2 – Compuertas Lógicas
 
-## Objetivo
+##  Objetivo
 Reconocer las diferentes compuertas lógicas manejadas en el curso, identificando sus circuitos integrados, esquemas de conexión, tablas de verdad y funciones booleanas.
 
 ## Resumen de Circuitos Integrados
@@ -258,14 +264,11 @@ La salida es **1** únicamente cuando **todas** las entradas son 1.
 | 1 | 1 | 1 |  Encendido |
 
 ### Ficha Técnica
-- **74HC08:** https://www.ti.com/lit/ds/symlink/sn74hc08.pdf
-- **74LS08:** https://www.ti.com/lit/ds/symlink/sn74ls08.pdf
+-  **74HC08:** https://www.ti.com/lit/ds/symlink/sn74hc08.pdf
+-  **74LS08:** https://www.ti.com/lit/ds/symlink/sn74ls08.pdf
 
->  **Esquema del integrado 74HC08 / 74LS08**
-> *(Insertar imagen del esquema de la ficha técnica aquí)*
-
->  **Foto del montaje – Compuerta AND**
-> *(Insertar foto del montaje en protoboard aquí)*
+>  **Esquema y foto del montaje – Compuerta AND**
+> *(Subir foto del montaje con nombre: `and_montaje.png`)*
 
 ---
 
@@ -285,14 +288,11 @@ La salida es **1** cuando **al menos una** de las entradas es 1.
 | 1 | 1 | 1 |  Encendido |
 
 ### Ficha Técnica
-- **74HC32:** https://www.ti.com/lit/ds/symlink/sn74hc32.pdf
-- **74LS32:** https://www.ti.com/lit/ds/symlink/sn74ls32.pdf
+-  **74HC32:** https://www.ti.com/lit/ds/symlink/sn74hc32.pdf
+-  **74LS32:** https://www.ti.com/lit/ds/symlink/sn74ls32.pdf
 
->  **Esquema del integrado 74HC32 / 74LS32**
-> *(Insertar imagen del esquema de la ficha técnica aquí)*
-
->  **Foto del montaje – Compuerta OR**
-> *(Insertar foto del montaje en protoboard aquí)*
+>  **Esquema y foto del montaje – Compuerta OR**
+> *(Subir foto del montaje con nombre: `or_montaje.png`)*
 
 ---
 
@@ -300,7 +300,7 @@ La salida es **1** cuando **al menos una** de las entradas es 1.
 
 **Función Booleana:** `Y = Ā`
 
-La salida es siempre el **inverso** de la entrada (también llamada inversora).
+La salida es siempre el **inverso** de la entrada.
 
 ### Tabla de Verdad
 
@@ -310,14 +310,11 @@ La salida es siempre el **inverso** de la entrada (también llamada inversora).
 | 1 | 0 |  Apagado |
 
 ### Ficha Técnica
-- **74HC04:** https://www.ti.com/lit/ds/symlink/sn74hc04.pdf
-- **74LS04:** https://www.ti.com/lit/ds/symlink/sn74ls04.pdf
+-  **74HC04:** https://www.ti.com/lit/ds/symlink/sn74hc04.pdf
+-  **74LS04:** https://www.ti.com/lit/ds/symlink/sn74ls04.pdf
 
->  **Esquema del integrado 74HC04 / 74LS04**
-> *(Insertar imagen del esquema de la ficha técnica aquí)*
-
->  **Foto del montaje – Compuerta NOT**
-> *(Insertar foto del montaje en protoboard aquí)*
+>  **Esquema y foto del montaje – Compuerta NOT**
+> *(Subir foto del montaje con nombre: `not_montaje.png`)*
 
 ---
 
@@ -325,7 +322,7 @@ La salida es siempre el **inverso** de la entrada (también llamada inversora).
 
 **Función Booleana:** `Y = ‾(A · B)`
 
-Es la negación de la AND. La salida es **0** únicamente cuando **todas** las entradas son 1.
+La salida es **0** únicamente cuando **todas** las entradas son 1.
 
 ### Tabla de Verdad
 
@@ -337,14 +334,11 @@ Es la negación de la AND. La salida es **0** únicamente cuando **todas** las e
 | 1 | 1 | 0 |  Apagado |
 
 ### Ficha Técnica
-- **74HC00:** https://www.ti.com/lit/ds/symlink/sn74hc00.pdf
-- **74LS00:** https://www.ti.com/lit/ds/symlink/sn74ls00.pdf
+-  **74HC00:** https://www.ti.com/lit/ds/symlink/sn74hc00.pdf
+-  **74LS00:** https://www.ti.com/lit/ds/symlink/sn74ls00.pdf
 
->  **Esquema del integrado 74HC00 / 74LS00**
-> *(Insertar imagen del esquema de la ficha técnica aquí)*
-
->  **Foto del montaje – Compuerta NAND**
-> *(Insertar foto del montaje en protoboard aquí)*
+>  **Esquema y foto del montaje – Compuerta NAND**
+> *(Subir foto del montaje con nombre: `nand_montaje.png`)*
 
 ---
 
@@ -352,7 +346,7 @@ Es la negación de la AND. La salida es **0** únicamente cuando **todas** las e
 
 **Función Booleana:** `Y = ‾(A + B)`
 
-Es la negación de la OR. La salida es **1** únicamente cuando **todas** las entradas son 0.
+La salida es **1** únicamente cuando **todas** las entradas son 0.
 
 ### Tabla de Verdad
 
@@ -364,14 +358,11 @@ Es la negación de la OR. La salida es **1** únicamente cuando **todas** las en
 | 1 | 1 | 0 |  Apagado |
 
 ### Ficha Técnica
-- **74HC02:** https://www.ti.com/lit/ds/symlink/sn74hc02.pdf
-- **74LS02:** https://www.ti.com/lit/ds/symlink/sn74ls02.pdf
+-  **74HC02:** https://www.ti.com/lit/ds/symlink/sn74hc02.pdf
+-  **74LS02:** https://www.ti.com/lit/ds/symlink/sn74ls02.pdf
 
->  **Esquema del integrado 74HC02 / 74LS02**
-> *(Insertar imagen del esquema de la ficha técnica aquí)*
-
->  **Foto del montaje – Compuerta NOR**
-> *(Insertar foto del montaje en protoboard aquí)*
+>  **Esquema y foto del montaje – Compuerta NOR**
+> *(Subir foto del montaje con nombre: `nor_montaje.png`)*
 
 ---
 
@@ -391,21 +382,14 @@ La salida es **1** cuando las entradas son **diferentes** entre sí.
 | 1 | 1 | 0 |  Apagado |
 
 ### Ficha Técnica
-- **74HC86:** https://www.ti.com/lit/ds/symlink/sn74hc86.pdf
-- **74LS86:** https://www.ti.com/lit/ds/symlink/sn74ls86.pdf
+-  **74HC86:** https://www.ti.com/lit/ds/symlink/sn74hc86.pdf
+-  **74LS86:** https://www.ti.com/lit/ds/symlink/sn74ls86.pdf
 
->  **Esquema del integrado 74HC86 / 74LS86**
-> *(Insertar imagen del esquema de la ficha técnica aquí)*
-
->  **Foto del montaje – Compuerta XOR**
-> *(Insertar foto del montaje en protoboard aquí)*
+>  **Esquema y foto del montaje – Compuerta XOR**
+> *(Subir foto del montaje con nombre: `xor_montaje.png`)*
 
 ---
 
 <p align="center">
   <em>Fundación Universitaria Compensar – Experimenta Conecta · Marzo 2026</em>
-</p>
-
----
-
-*Fundación Universitaria Compensar – Experimenta Conecta*
+</p>*Fundación Universitaria Compensar – Experimenta Conecta*
